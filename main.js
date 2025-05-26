@@ -1,3 +1,23 @@
+const updateSadBunnyCount = () => {
+  const sadBunnyCount = settings.bunnies.filter(b => b.sad).length;
+  elements.indicator.innerHTML = sadBunnyCount ? `x ${sadBunnyCount}` : '';
+  if (!sadBunnyCount) {
+    elements.endMessage.classList.remove('d-none');
+    elements.indicator.classList.add('happy');
+
+    const bg = document.getElementById('bg-music');
+    const win = document.getElementById('win-music');
+
+    if (bg && win) {
+      bg.pause();
+      bg.currentTime = 0;
+      win.volume = 0.5;
+      win.play();
+    }
+  }
+}
+
+
 function init() {
 
   const elements = {
@@ -154,7 +174,7 @@ function init() {
   }
 
   const triggerBunnyMessage = (bunny, classToAdd) => {
-    bunny.el.setAttribute('message', ['thanks!', 'arigato!', 'yeah!', '^ _ ^', 'thank you!'][randomN(5) - 1])
+    bunny.el.setAttribute('message', ['Thanks!', 'I’m so happy now!', 'You are a hero!', '^ _ ^', 'thank you!'][randomN(5) - 1])
     bunny.el.classList.add(classToAdd)
     setTimeout(() => {
       bunny.el.classList.remove(classToAdd)
