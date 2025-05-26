@@ -1,6 +1,9 @@
 # 🐻 Hug Bunny
 I've recreated the **Hug Bunny** game as a modern **React application**! This version keeps the cozy charm of the original but brings several improvements for a better, more responsive experience.
 
+![Screenshot 2025-05-26 163350](https://github.com/user-attachments/assets/fdd0df52-5bff-499f-b800-e363c2011166)
+
+
 ## 🚀 What's New
 
 - 🔧 **React Integration** – Fully component-based, maintainable structure
