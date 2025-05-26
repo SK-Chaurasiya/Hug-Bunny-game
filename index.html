@@ -5,10 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" type="text/css" />
-  <title>Document</title>
+  <title>Bunny is Hugged</title>
 </head>
 
 <body>
+  <audio id="bg-music" src="./morning-bliss-lo-fi-music-269776.mp3" loop autoplay></audio>
+  <audio id="win-music" src="./ghost-walk-127743.mp3"></audio>
+  
   <div class="wrapper">
     <div class="end-message d-none">
       <p>
@@ -31,9 +34,19 @@
   </div>
 
   <div class="indicator">x 45</div>
+  <!-- <div class="sign">
+    by masahito / <a href="http://www.ma5a.com/">ma5a.com</a>
+  </div> -->
 
-
-  
+  <script>
+    window.addEventListener('click', () => {
+      const bg = document.getElementById('bg-music');
+      if (bg && bg.paused) {
+        bg.volume = 0.3;
+        bg.play();
+      }
+    }, { once: true });
+  </script>
   <script src="main.js" type="text/javascript"></script>
 </body>
 
